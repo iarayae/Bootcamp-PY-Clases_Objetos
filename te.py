@@ -8,6 +8,7 @@ class Te:
         """
         Retorna el tiempo de preparación y la recomendación de consumo
         según el tipo de sabor seleccionado (1, 2 o 3).
+        Retorna None si el sabor no es valido
         """
         if sabor == 1:
             return 3, "Se recomienda consumir al desayuno"
@@ -15,13 +16,18 @@ class Te:
             return 5, "Se recomienda consumir al medio día"
         elif sabor == 3:
             return 6, "Se recomienda consumir al atardecer"
+        else:
+            return None
 
     @staticmethod
     def obtener_precio(formato):
         """
         Retorna el precio del té según el formato (300g o 500g).
+        Retorna None si el formato no es válido.
         """
         if formato == 300:
             return 3000
         elif formato == 500:
             return 5000
+        else:
+            return None
